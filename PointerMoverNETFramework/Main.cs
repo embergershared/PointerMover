@@ -6,9 +6,9 @@ using PointerMoverNETFramework.Classes;
 
 namespace PointerMoverNETFramework
 {
-    public partial class Main : Form
+    public partial class formMain : Form
     {
-        public Main()
+        public formMain()
         {
             InitializeComponent();
         }
@@ -33,18 +33,18 @@ namespace PointerMoverNETFramework
                 new Language(2, "Brasileiro", "pt-BR")
             };
 
-            comboBox1.DataSource = languages;
-            comboBox1.DisplayMember = "Name";
-            comboBox1.ValueMember = "Code";
+            comboBoxLanguage.DataSource = languages;
+            comboBoxLanguage.DisplayMember = "Name";
+            comboBoxLanguage.ValueMember = "Code";
             var index = Array.Find(languages, element => element.Code == lang).Index;
-            comboBox1.SelectedIndex = index;
+            comboBoxLanguage.SelectedIndex = index;
         }
         
         private void comboBox1_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(comboBox1.SelectedValue.ToString()))
+            if (!string.IsNullOrEmpty(comboBoxLanguage.SelectedValue.ToString()))
             {
-                ChangeLanguage(comboBox1.SelectedValue.ToString());
+                ChangeLanguage(comboBoxLanguage.SelectedValue.ToString());
             }
             else
             {
