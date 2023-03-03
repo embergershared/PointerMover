@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PointerMover", "PointerMover.csproj", "{E8A91979-3D53-4B2D-85AB-37FFB3AA8A9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PointerMover.Core", "PointerMover.Core.csproj", "{E8A91979-3D53-4B2D-85AB-37FFB3AA8A9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointerMover.NETFramework", "..\PointerMoverNETFramework\PointerMover.NETFramework.csproj", "{9CFE061C-A641-4C5E-B33C-5E62910FC773}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{E8A91979-3D53-4B2D-85AB-37FFB3AA8A9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8A91979-3D53-4B2D-85AB-37FFB3AA8A9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8A91979-3D53-4B2D-85AB-37FFB3AA8A9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CFE061C-A641-4C5E-B33C-5E62910FC773}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CFE061C-A641-4C5E-B33C-5E62910FC773}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CFE061C-A641-4C5E-B33C-5E62910FC773}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CFE061C-A641-4C5E-B33C-5E62910FC773}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
