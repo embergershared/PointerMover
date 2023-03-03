@@ -1,4 +1,6 @@
-﻿namespace CursorMover
+﻿using System.Windows.Forms;
+
+namespace CursorMover
 {
     partial class MainForm
     {
