@@ -1,6 +1,6 @@
 ﻿namespace MainForm
 {
-    partial class Form1
+    partial class Form_Main
     {
         /// <summary>
         ///  Required designer variable.
@@ -80,7 +80,7 @@
             comboBox_Language.Size = new Size(151, 28);
             comboBox_Language.TabIndex = 4;
             // 
-            // Form1
+            // Form_Main
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -90,7 +90,7 @@
             Controls.Add(button_Start);
             Controls.Add(button_Stop);
             Controls.Add(button_Quit);
-            Name = "Form1";
+            Name = "Form_Main";
             Text = "Pointer mover";
             ResumeLayout(false);
             PerformLayout();
