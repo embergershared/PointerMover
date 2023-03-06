@@ -31,6 +31,7 @@ namespace MainForm
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             button_Quit = new Button();
             button_Stop = new Button();
             button_Start = new Button();
@@ -40,62 +41,45 @@ namespace MainForm
             // 
             // button_Quit
             // 
-            button_Quit.Location = new Point(578, 252);
+            resources.ApplyResources(button_Quit, "button_Quit");
             button_Quit.Name = "button_Quit";
-            button_Quit.Size = new Size(110, 47);
-            button_Quit.TabIndex = 0;
-            button_Quit.Text = "Quit";
             button_Quit.UseVisualStyleBackColor = true;
             button_Quit.Click += button1_Click;
             // 
             // button_Stop
             // 
-            button_Stop.Location = new Point(398, 252);
+            resources.ApplyResources(button_Stop, "button_Stop");
             button_Stop.Name = "button_Stop";
-            button_Stop.Size = new Size(110, 47);
-            button_Stop.TabIndex = 1;
-            button_Stop.Text = "Stop";
             button_Stop.UseVisualStyleBackColor = true;
             // 
             // button_Start
             // 
-            button_Start.Location = new Point(282, 252);
+            resources.ApplyResources(button_Start, "button_Start");
             button_Start.Name = "button_Start";
-            button_Start.Size = new Size(110, 47);
-            button_Start.TabIndex = 2;
-            button_Start.Text = "Start";
             button_Start.UseVisualStyleBackColor = true;
             // 
             // label_Language
             // 
-            label_Language.AutoSize = true;
-            label_Language.Location = new Point(12, 265);
+            resources.ApplyResources(label_Language, "label_Language");
             label_Language.Name = "label_Language";
-            label_Language.Size = new Size(74, 20);
-            label_Language.TabIndex = 3;
-            label_Language.Text = "Language";
             // 
             // comboBox_Language
             // 
             comboBox_Language.FormattingEnabled = true;
-            comboBox_Language.Location = new Point(92, 262);
+            resources.ApplyResources(comboBox_Language, "comboBox_Language");
             comboBox_Language.Name = "comboBox_Language";
-            comboBox_Language.Size = new Size(151, 28);
-            comboBox_Language.TabIndex = 4;
             comboBox_Language.SelectionChangeCommitted += comboBox_Language_SelectionChangeCommitted;
             // 
             // Main
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(699, 311);
             Controls.Add(comboBox_Language);
             Controls.Add(label_Language);
             Controls.Add(button_Start);
             Controls.Add(button_Stop);
             Controls.Add(button_Quit);
             Name = "Main";
-            Text = "Pointer mover";
             Load += Main_Load;
             ResumeLayout(false);
             PerformLayout();

@@ -57,4 +57,147 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="button_Quit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>650, 290</value>
+  </data>
+  <data name="button_Quit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 54</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="button_Quit.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="button_Quit.Text" xml:space="preserve">
+    <value>Quit</value>
+  </data>
+  <data name="&gt;&gt;button_Quit.Name" xml:space="preserve">
+    <value>button_Quit</value>
+  </data>
+  <data name="&gt;&gt;button_Quit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_Quit.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;button_Quit.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="button_Stop.Location" type="System.Drawing.Point, System.Drawing">
+    <value>448, 290</value>
+  </data>
+  <data name="button_Stop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 54</value>
+  </data>
+  <data name="button_Stop.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="button_Stop.Text" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="&gt;&gt;button_Stop.Name" xml:space="preserve">
+    <value>button_Stop</value>
+  </data>
+  <data name="&gt;&gt;button_Stop.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_Stop.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;button_Stop.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="button_Start.Location" type="System.Drawing.Point, System.Drawing">
+    <value>317, 290</value>
+  </data>
+  <data name="button_Start.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 54</value>
+  </data>
+  <data name="button_Start.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="button_Start.Text" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="&gt;&gt;button_Start.Name" xml:space="preserve">
+    <value>button_Start</value>
+  </data>
+  <data name="&gt;&gt;button_Start.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_Start.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;button_Start.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label_Language.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label_Language.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 305</value>
+  </data>
+  <data name="label_Language.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 23</value>
+  </data>
+  <data name="label_Language.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="label_Language.Text" xml:space="preserve">
+    <value>Language :</value>
+  </data>
+  <data name="&gt;&gt;label_Language.Name" xml:space="preserve">
+    <value>label_Language</value>
+  </data>
+  <data name="&gt;&gt;label_Language.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label_Language.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label_Language.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="comboBox_Language.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 301</value>
+  </data>
+  <data name="comboBox_Language.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 31</value>
+  </data>
+  <data name="comboBox_Language.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;comboBox_Language.Name" xml:space="preserve">
+    <value>comboBox_Language</value>
+  </data>
+  <data name="&gt;&gt;comboBox_Language.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBox_Language.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;comboBox_Language.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>9, 23</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>786, 358</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10.2pt</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Pointer mover</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Main</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>
