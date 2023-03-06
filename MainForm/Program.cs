@@ -1,3 +1,6 @@
+using System;
+using System.Windows.Forms;
+
 namespace MainForm
 {
     internal static class Program
@@ -11,7 +14,7 @@ namespace MainForm
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form_Main());
+            Application.Run(new Main());
         }
     }
 }

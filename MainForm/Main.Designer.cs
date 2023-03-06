@@ -1,6 +1,9 @@
-﻿namespace MainForm
+﻿using System.Windows.Forms;
+using System.Drawing;
+
+namespace MainForm
 {
-    partial class Form_Main
+    partial class Main
     {
         /// <summary>
         ///  Required designer variable.
@@ -79,8 +82,9 @@
             comboBox_Language.Name = "comboBox_Language";
             comboBox_Language.Size = new Size(151, 28);
             comboBox_Language.TabIndex = 4;
+            comboBox_Language.SelectionChangeCommitted += comboBox_Language_SelectionChangeCommitted;
             // 
-            // Form_Main
+            // Main
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -90,8 +94,9 @@
             Controls.Add(button_Start);
             Controls.Add(button_Stop);
             Controls.Add(button_Quit);
-            Name = "Form_Main";
+            Name = "Main";
             Text = "Pointer mover";
+            Load += Main_Load;
             ResumeLayout(false);
             PerformLayout();
         }
