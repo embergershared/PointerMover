@@ -27,7 +27,6 @@ using System.Globalization;
 using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
-using System.Xml.Serialization;
 using MainForm.Interfaces;
 using Microsoft.Extensions.Configuration;
 
@@ -130,6 +129,5 @@ namespace MainForm
         }
 
         #endregion
-
     }
 }
