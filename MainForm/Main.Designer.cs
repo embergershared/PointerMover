@@ -44,7 +44,7 @@ namespace MainForm
             resources.ApplyResources(button_Quit, "button_Quit");
             button_Quit.Name = "button_Quit";
             button_Quit.UseVisualStyleBackColor = true;
-            button_Quit.Click += button1_Click;
+            button_Quit.Click += Button_Quit_Click;
             // 
             // button_Stop
             // 
@@ -68,7 +68,7 @@ namespace MainForm
             comboBox_Language.FormattingEnabled = true;
             resources.ApplyResources(comboBox_Language, "comboBox_Language");
             comboBox_Language.Name = "comboBox_Language";
-            comboBox_Language.SelectionChangeCommitted += comboBox_Language_SelectionChangeCommitted;
+            comboBox_Language.SelectionChangeCommitted += ComboBox_Language_SelectionChangeCommitted;
             // 
             // Main
             // 
