@@ -1,4 +1,4 @@
-﻿using MainForm.Classes;
+﻿using MainForm.Models;
 using System.Collections.Generic;
 
 namespace MainForm.Interfaces;

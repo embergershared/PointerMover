@@ -71,6 +71,7 @@ namespace MainForm
             {
                 // If program launch failed, display error to the user
                 var text = $"There was an error that caused the application to crash.\n\n{e}";
+                // ReSharper disable once LocalizableElement
                 MessageBox.Show(text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -80,6 +81,7 @@ namespace MainForm
             return Host.CreateDefaultBuilder()
                 .ConfigureServices((services) => {
                     services.AddSingleton<ILanguagesCollections, LanguagesCollections>();
+                    services.AddTransient<IPointerMover, PointerMover>();
                     if (Config != null) _ = services.AddSingleton(Config);
                     services.AddTransient<Main>();
                 });

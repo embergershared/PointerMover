@@ -66,7 +66,7 @@
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="button_Quit.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="button_Quit.Text" xml:space="preserve">
     <value>Quit</value>
@@ -81,7 +81,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button_Quit.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>9</value>
+  </data>
+  <data name="button_Stop.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="button_Stop.Location" type="System.Drawing.Point, System.Drawing">
     <value>448, 290</value>
@@ -105,7 +108,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button_Stop.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>8</value>
   </data>
   <data name="button_Start.Location" type="System.Drawing.Point, System.Drawing">
     <value>317, 290</value>
@@ -114,7 +117,7 @@
     <value>124, 54</value>
   </data>
   <data name="button_Start.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>0</value>
   </data>
   <data name="button_Start.Text" xml:space="preserve">
     <value>Start</value>
@@ -129,7 +132,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button_Start.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>7</value>
   </data>
   <data name="label_Language.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -156,7 +159,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label_Language.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>6</value>
   </data>
   <data name="comboBox_Language.Location" type="System.Drawing.Point, System.Drawing">
     <value>111, 301</value>
@@ -177,6 +180,141 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;comboBox_Language.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <metadata name="timer_RunningTime.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="textBox_TimeElapsed.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 36pt</value>
+  </data>
+  <data name="textBox_TimeElapsed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>251, 46</value>
+  </data>
+  <data name="textBox_TimeElapsed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>345, 87</value>
+  </data>
+  <data name="textBox_TimeElapsed.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="textBox_TimeElapsed.Text" xml:space="preserve">
+    <value>00h 00m 00s</value>
+  </data>
+  <data name="&gt;&gt;textBox_TimeElapsed.Name" xml:space="preserve">
+    <value>textBox_TimeElapsed</value>
+  </data>
+  <data name="&gt;&gt;textBox_TimeElapsed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox_TimeElapsed.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBox_TimeElapsed.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="label_Elapsed.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label_Elapsed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>88, 80</value>
+  </data>
+  <data name="label_Elapsed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 23</value>
+  </data>
+  <data name="label_Elapsed.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="label_Elapsed.Text" xml:space="preserve">
+    <value>Elapsed time:</value>
+  </data>
+  <data name="label_Elapsed.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;label_Elapsed.Name" xml:space="preserve">
+    <value>label_Elapsed</value>
+  </data>
+  <data name="&gt;&gt;label_Elapsed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label_Elapsed.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label_Elapsed.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="numericUpDown_Interval.Location" type="System.Drawing.Point, System.Drawing">
+    <value>251, 176</value>
+  </data>
+  <data name="numericUpDown_Interval.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 30</value>
+  </data>
+  <data name="numericUpDown_Interval.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Interval.Name" xml:space="preserve">
+    <value>numericUpDown_Interval</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Interval.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Interval.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Interval.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label_MoveInterval.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label_MoveInterval.Location" type="System.Drawing.Point, System.Drawing">
+    <value>54, 178</value>
+  </data>
+  <data name="label_MoveInterval.Size" type="System.Drawing.Size, System.Drawing">
+    <value>187, 23</value>
+  </data>
+  <data name="label_MoveInterval.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="label_MoveInterval.Text" xml:space="preserve">
+    <value>Move the pointer every</value>
+  </data>
+  <data name="&gt;&gt;label_MoveInterval.Name" xml:space="preserve">
+    <value>label_MoveInterval</value>
+  </data>
+  <data name="&gt;&gt;label_MoveInterval.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label_MoveInterval.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label_MoveInterval.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label_Seconds.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label_Seconds.Location" type="System.Drawing.Point, System.Drawing">
+    <value>356, 178</value>
+  </data>
+  <data name="label_Seconds.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="label_Seconds.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="label_Seconds.Text" xml:space="preserve">
+    <value>seconds.</value>
+  </data>
+  <data name="&gt;&gt;label_Seconds.Name" xml:space="preserve">
+    <value>label_Seconds</value>
+  </data>
+  <data name="&gt;&gt;label_Seconds.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label_Seconds.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label_Seconds.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -193,6 +331,12 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Pointer mover</value>
+  </data>
+  <data name="&gt;&gt;timer_RunningTime.Name" xml:space="preserve">
+    <value>timer_RunningTime</value>
+  </data>
+  <data name="&gt;&gt;timer_RunningTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Main</value>

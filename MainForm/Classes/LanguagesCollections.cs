@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using MainForm.Interfaces;
+using MainForm.Models;
 
 namespace MainForm.Classes;
 
