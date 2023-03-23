@@ -1,4 +1,5 @@
 ﻿using MainForm.Interfaces;
+using Microsoft.Extensions.Localization;
 using System.Windows.Forms;
 
 namespace MainForm.Classes
@@ -13,6 +14,8 @@ namespace MainForm.Classes
         private int _pixelMoveValue;
         // Back and Forth control
         private bool _moveAway;
+        // Localization
+        private readonly IStringLocalizer<PointerMover> _localizer;
 
         // Debug infos display
         private Label? _labelAction;
@@ -23,16 +26,19 @@ namespace MainForm.Classes
 
         #region Constructor
 
-        public PointerMover()
+        public PointerMover(
+            IStringLocalizer<PointerMover> localizer
+            )
         {
             //Initialize(5);
             _moveAway = true;
+            _localizer = localizer;
         }
 
         #endregion
 
         #region Public Methods
-        
+
         public void Initialize(int movePixelValue)
         {
             _pixelMoveValue = movePixelValue;
@@ -48,8 +54,9 @@ namespace MainForm.Classes
                 // If the pointer didn't move since last interval, we move it
                 if (_pointerLastPos.IsSamePosition(currentPointerPosition))
                 {
-                    var direction = _moveAway ? @"away" : @"back";
-                    if (_labelAction != null) _labelAction.Text = $@"Moving pointer {direction}.";
+                    var direction = _moveAway ? _localizer["away"] : _localizer["back"];
+                    // ReSharper disable once LocalizableElement
+                    if (_labelAction != null) _labelAction.Text = $"{_localizer["Moving pointer"]} {direction}.";
 
                     var moveValue = _moveAway ? (1 * _pixelMoveValue) : (-1 * _pixelMoveValue);
                     PerformMove(moveValue);

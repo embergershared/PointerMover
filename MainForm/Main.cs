@@ -33,6 +33,7 @@ using MainForm.Models;
 using MainForm.Classes;
 // ReSharper disable once RedundantUsingDirective
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Header;
+using Microsoft.Extensions.Localization;
 
 namespace MainForm
 {
@@ -42,6 +43,8 @@ namespace MainForm
 
         // UI Languages
         private readonly Dictionary<string, Lang[]> _languages;
+        // Localization
+        private readonly IStringLocalizer<Main> _localizer = null!;
         // Dependencies
         private readonly IConfigurationRoot _configurationRoot;
         private readonly IPointerMover _pointerMover;
@@ -58,12 +61,14 @@ namespace MainForm
         public Main(
             ILanguagesCollections languagesCollections,
             IConfigurationRoot configurationRoot,
-            IPointerMover pointerMover
+            IPointerMover pointerMover,
+            IStringLocalizer<Main> localizer
             )
         {
             _configurationRoot = configurationRoot;
             _languages = languagesCollections.LanguagesCollections;
             _pointerMover = pointerMover;
+            _localizer = localizer;
 
             InitializeComponent();
 

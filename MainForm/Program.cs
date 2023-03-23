@@ -84,6 +84,11 @@ namespace MainForm
                     services.AddTransient<IPointerMover, PointerMover>();
                     if (Config != null) _ = services.AddSingleton(Config);
                     services.AddTransient<Main>();
+                    services.AddLocalization();
+                    //services.AddLocalization(options =>
+                    //{
+                    //    options.ResourcesPath = "/Resources";
+                    //});
                 });
         }
     }
