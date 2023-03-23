@@ -14,10 +14,15 @@ namespace MainForm.Classes
         // Back and Forth control
         private bool _moveAway;
 
+        // Debug infos display
+        private Label? _labelAction;
+        private Label? _labelX;
+        private Label? _labelY;
+
         #endregion
 
         #region Constructor
-        
+
         public PointerMover()
         {
             //Initialize(5);
@@ -43,17 +48,35 @@ namespace MainForm.Classes
                 // If the pointer didn't move since last interval, we move it
                 if (_pointerLastPos.IsSamePosition(currentPointerPosition))
                 {
+                    var direction = _moveAway ? @"away" : @"back";
+                    if (_labelAction != null) _labelAction.Text = $@"Moving pointer {direction}.";
+
                     var moveValue = _moveAway ? (1 * _pixelMoveValue) : (-1 * _pixelMoveValue);
                     PerformMove(moveValue);
                     _moveAway = !_moveAway;
+                }
+                else
+                {
+                    if (_labelAction != null) _labelAction.Text = @"Pointer has already been moved.";
+                    _moveAway = true;
                 }
             }
 
             // Update Last pointer position
             _pointerLastPos = PointerHelper.GetCurrentPosition();
+            if (_pointerLastPos == null) return;
+            if (_labelX != null) _labelX.Text = @$"X: {_pointerLastPos.X}";
+            if (_labelY != null) _labelY.Text = @$"Y: {_pointerLastPos.Y}";
         }
 
-        private void PerformMove(int moveValue)
+        public void ShareDebugInfos(Label labelAction, Label labelX, Label labelY)
+        {
+            _labelAction = labelAction;
+            _labelX = labelX;
+            _labelY = labelY;
+        }
+
+        private static void PerformMove(int moveValue)
         {
             // Calculating potential new pointer position:
             var currentPosition = PointerHelper.GetCurrentPosition();

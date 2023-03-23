@@ -26,11 +26,11 @@ using System.Globalization;
 using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
-// ReSharper disable once RedundantUsingDirective
-using MainForm.Classes;
 using MainForm.Interfaces;
 using Microsoft.Extensions.Configuration;
 using MainForm.Models;
+// ReSharper disable once RedundantUsingDirective
+using MainForm.Classes;
 // ReSharper disable once RedundantUsingDirective
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Header;
 
@@ -49,6 +49,7 @@ namespace MainForm
         private int _elapsedSeconds;
         private int _moveInterval;
         private int _movePixels;
+        private readonly bool _debugIsEnabled;
 
         #endregion
 
@@ -62,9 +63,29 @@ namespace MainForm
         {
             _configurationRoot = configurationRoot;
             _languages = languagesCollections.LanguagesCollections;
-            InitializeComponent();
             _pointerMover = pointerMover;
-            SetPointerMoverPixelsMove();
+
+            InitializeComponent();
+
+            _debugIsEnabled = Convert.ToBoolean(_configurationRoot["EnableDebug"]);
+        }
+
+        private void ShowDebugComponents()
+        {
+            label_Debug.Show();
+            label_X.Show();
+            label_Y.Show();
+            label_Action.Show();
+            label_Command.Show();
+        }
+
+        private void HideDebugComponents()
+        {
+            label_Debug.Hide();
+            label_X.Hide();
+            label_Y.Hide();
+            label_Action.Hide();
+            label_Command.Hide();
         }
 
         #endregion
@@ -76,10 +97,18 @@ namespace MainForm
             _elapsedSeconds = 0;
             DisplayElapsedTime(_elapsedSeconds);
 
+            SetPointerMoverPixelsMove();
+
             button_Stop.Enabled = true;
             button_Start.Enabled = false;
             numericUpDown_Interval.Enabled = false;
             _moveInterval = (int)numericUpDown_Interval.Value;
+
+            if (_debugIsEnabled)
+            {
+                label_Command.Text = $@"Moving of {_movePixels} pixels, every {_moveInterval} seconds.";
+                ShowDebugComponents();
+            }
 
             timer_RunningTime.Start();
         }
@@ -121,6 +150,18 @@ namespace MainForm
                 ? requestedStartLanguage
                 : _languages.First().Key;
             SetFormUiLanguage(startLanguage);
+
+            ClearCodingTexts();
+
+            _pointerMover.ShareDebugInfos(label_Action, label_X, label_Y);
+            if (!_debugIsEnabled) return;
+            ShowDebugComponents();
+        }
+
+        private void ClearCodingTexts()
+        {
+            label_Action.Text = "";
+            label_Command.Text = "";
         }
 
         private void SetFormUiLanguage(string? lang)
@@ -154,11 +195,9 @@ namespace MainForm
             DisplayElapsedTime(_elapsedSeconds);
 
             // 3. Check if we move the pointer
-            if (_elapsedSeconds % _moveInterval == 0)
-            {
-                // Move the pointer
-                _pointerMover.MovePointer();
-            }
+            if (_elapsedSeconds % _moveInterval != 0) return;
+            // Move the pointer
+            _pointerMover.MovePointer();
         }
 
         private void DisplayElapsedTime(int i)
@@ -174,7 +213,21 @@ namespace MainForm
             button_Stop.Enabled = false;
             numericUpDown_Interval.Enabled = true;
 
+            HideDebugComponents();
+            label_Command.Text = "";
+
             timer_RunningTime.Stop();
+        }
+
+        private void Label_Action_TextChanged(object sender, EventArgs e)
+        {
+            timer_DisplayDebugAction.Start();
+        }
+
+        private void timer_DisplayDebugAction_Tick(object sender, EventArgs e)
+        {
+            label_Action.Text = "";
+            timer_DisplayDebugAction.Stop();
         }
     }
 }

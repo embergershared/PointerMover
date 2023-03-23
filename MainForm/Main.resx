@@ -81,7 +81,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button_Quit.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>14</value>
   </data>
   <data name="button_Stop.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -108,7 +108,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button_Stop.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>13</value>
   </data>
   <data name="button_Start.Location" type="System.Drawing.Point, System.Drawing">
     <value>317, 290</value>
@@ -132,7 +132,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button_Start.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>12</value>
   </data>
   <data name="label_Language.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -159,7 +159,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label_Language.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>11</value>
   </data>
   <data name="comboBox_Language.Location" type="System.Drawing.Point, System.Drawing">
     <value>111, 301</value>
@@ -180,7 +180,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;comboBox_Language.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>10</value>
   </data>
   <metadata name="timer_RunningTime.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -210,7 +210,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBox_TimeElapsed.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>9</value>
   </data>
   <data name="label_Elapsed.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -240,7 +240,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label_Elapsed.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>8</value>
   </data>
   <data name="numericUpDown_Interval.Location" type="System.Drawing.Point, System.Drawing">
     <value>251, 176</value>
@@ -261,7 +261,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Interval.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>7</value>
   </data>
   <data name="label_MoveInterval.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -288,7 +288,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label_MoveInterval.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>6</value>
   </data>
   <data name="label_Seconds.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -315,8 +315,158 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label_Seconds.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="label_Debug.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label_Debug.Location" type="System.Drawing.Point, System.Drawing">
+    <value>146, 233</value>
+  </data>
+  <data name="label_Debug.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 23</value>
+  </data>
+  <data name="label_Debug.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="label_Debug.Text" xml:space="preserve">
+    <value>Debug:</value>
+  </data>
+  <data name="label_Debug.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;label_Debug.Name" xml:space="preserve">
+    <value>label_Debug</value>
+  </data>
+  <data name="&gt;&gt;label_Debug.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label_Debug.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label_Debug.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="label_X.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label_X.Location" type="System.Drawing.Point, System.Drawing">
+    <value>217, 219</value>
+  </data>
+  <data name="label_X.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 23</value>
+  </data>
+  <data name="label_X.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="label_X.Text" xml:space="preserve">
+    <value>X:</value>
+  </data>
+  <data name="label_X.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;label_X.Name" xml:space="preserve">
+    <value>label_X</value>
+  </data>
+  <data name="&gt;&gt;label_X.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label_X.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label_X.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label_Y.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label_Y.Location" type="System.Drawing.Point, System.Drawing">
+    <value>217, 256</value>
+  </data>
+  <data name="label_Y.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 23</value>
+  </data>
+  <data name="label_Y.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="label_Y.Text" xml:space="preserve">
+    <value>Y:</value>
+  </data>
+  <data name="label_Y.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;label_Y.Name" xml:space="preserve">
+    <value>label_Y</value>
+  </data>
+  <data name="&gt;&gt;label_Y.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label_Y.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label_Y.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label_Command.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label_Command.Location" type="System.Drawing.Point, System.Drawing">
+    <value>357, 255</value>
+  </data>
+  <data name="label_Command.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 23</value>
+  </data>
+  <data name="label_Command.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="label_Command.Text" xml:space="preserve">
+    <value>label_Command</value>
+  </data>
+  <data name="label_Command.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;label_Command.Name" xml:space="preserve">
+    <value>label_Command</value>
+  </data>
+  <data name="&gt;&gt;label_Command.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label_Command.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label_Command.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label_Action.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label_Action.Location" type="System.Drawing.Point, System.Drawing">
+    <value>437, 178</value>
+  </data>
+  <data name="label_Action.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 23</value>
+  </data>
+  <data name="label_Action.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="label_Action.Text" xml:space="preserve">
+    <value>label_Action</value>
+  </data>
+  <data name="&gt;&gt;label_Action.Name" xml:space="preserve">
+    <value>label_Action</value>
+  </data>
+  <data name="&gt;&gt;label_Action.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label_Action.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label_Action.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="timer_DisplayDebugAction.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>233, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -336,6 +486,12 @@
     <value>timer_RunningTime</value>
   </data>
   <data name="&gt;&gt;timer_RunningTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timer_DisplayDebugAction.Name" xml:space="preserve">
+    <value>timer_DisplayDebugAction</value>
+  </data>
+  <data name="&gt;&gt;timer_DisplayDebugAction.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

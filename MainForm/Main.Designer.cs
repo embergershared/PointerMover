@@ -44,6 +44,12 @@ namespace MainForm
             numericUpDown_Interval = new NumericUpDown();
             label_MoveInterval = new Label();
             label_Seconds = new Label();
+            label_Debug = new Label();
+            label_X = new Label();
+            label_Y = new Label();
+            label_Command = new Label();
+            label_Action = new Label();
+            timer_DisplayDebugAction = new Timer(components);
             ((System.ComponentModel.ISupportInitialize)numericUpDown_Interval).BeginInit();
             SuspendLayout();
             // 
@@ -116,10 +122,46 @@ namespace MainForm
             resources.ApplyResources(label_Seconds, "label_Seconds");
             label_Seconds.Name = "label_Seconds";
             // 
+            // label_Debug
+            // 
+            resources.ApplyResources(label_Debug, "label_Debug");
+            label_Debug.Name = "label_Debug";
+            // 
+            // label_X
+            // 
+            resources.ApplyResources(label_X, "label_X");
+            label_X.Name = "label_X";
+            // 
+            // label_Y
+            // 
+            resources.ApplyResources(label_Y, "label_Y");
+            label_Y.Name = "label_Y";
+            // 
+            // label_Command
+            // 
+            resources.ApplyResources(label_Command, "label_Command");
+            label_Command.Name = "label_Command";
+            // 
+            // label_Action
+            // 
+            resources.ApplyResources(label_Action, "label_Action");
+            label_Action.Name = "label_Action";
+            label_Action.TextChanged += Label_Action_TextChanged;
+            // 
+            // timer_DisplayDebugAction
+            // 
+            timer_DisplayDebugAction.Interval = 1000;
+            timer_DisplayDebugAction.Tick += timer_DisplayDebugAction_Tick;
+            // 
             // Main
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(label_Action);
+            Controls.Add(label_Command);
+            Controls.Add(label_Y);
+            Controls.Add(label_X);
+            Controls.Add(label_Debug);
             Controls.Add(label_Seconds);
             Controls.Add(label_MoveInterval);
             Controls.Add(numericUpDown_Interval);
@@ -130,6 +172,8 @@ namespace MainForm
             Controls.Add(button_Start);
             Controls.Add(button_Stop);
             Controls.Add(button_Quit);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "Main";
             Load += Main_Load;
             ((System.ComponentModel.ISupportInitialize)numericUpDown_Interval).EndInit();
@@ -150,5 +194,11 @@ namespace MainForm
         private NumericUpDown numericUpDown_Interval;
         private Label label_MoveInterval;
         private Label label_Seconds;
+        private Label label_Debug;
+        private Label label_X;
+        private Label label_Y;
+        private Label label_Command;
+        private Label label_Action;
+        private Timer timer_DisplayDebugAction;
     }
 }

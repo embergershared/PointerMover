@@ -52,8 +52,7 @@ namespace MainForm.Classes
         }
 
         // Set cursor position relative 
-        public static bool SetPositionRelative(int cDeltaX,
-                                               int cDeltaY)
+        public static bool SetPositionRelative(int cDeltaX, int cDeltaY)
         {
             // Create INPUT structure
             var input = new SendInputWrapper.Input();
