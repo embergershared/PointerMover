@@ -89,7 +89,7 @@ namespace MainForm
             // timer_RunningTime
             // 
             timer_RunningTime.Interval = 1000;
-            timer_RunningTime.Tick += Timer_RunningTime_Ticks;
+            timer_RunningTime.Tick += Timer_RunningTime_Tick;
             // 
             // textBox_TimeElapsed
             // 
@@ -151,7 +151,7 @@ namespace MainForm
             // timer_DisplayDebugAction
             // 
             timer_DisplayDebugAction.Interval = 1000;
-            timer_DisplayDebugAction.Tick += timer_DisplayDebugAction_Tick;
+            timer_DisplayDebugAction.Tick += Timer_DisplayDebugAction_Tick;
             // 
             // Main
             // 

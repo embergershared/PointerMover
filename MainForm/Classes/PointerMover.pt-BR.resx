@@ -117,50 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="button_Quit.Text" xml:space="preserve">
-    <value>Quitter</value>
+  <data name="Moving pointer away." xml:space="preserve">
+    <value>Afastando o ponteiro.</value>
   </data>
-  <data name="button_Stop.Text" xml:space="preserve">
-    <value>Arrêter</value>
+  <data name="Moving pointer back." xml:space="preserve">
+    <value>Movendo o ponteiro para trás.</value>
   </data>
-  <data name="button_Start.Text" xml:space="preserve">
-    <value>Démarrer</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label_Elapsed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>111, 82</value>
-  </data>
-  <data name="label_Elapsed.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 23</value>
-  </data>
-  <data name="label_Elapsed.Text" xml:space="preserve">
-    <value>Temps écoulé:</value>
-  </data>
-  <data name="numericUpDown_Interval.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 30</value>
-  </data>
-  <data name="label_MoveInterval.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 178</value>
-  </data>
-  <data name="label_MoveInterval.Size" type="System.Drawing.Size, System.Drawing">
-    <value>231, 23</value>
-  </data>
-  <data name="label_MoveInterval.Text" xml:space="preserve">
-    <value>Bouger le pointeur toutes les</value>
-  </data>
-  <data name="label_Seconds.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 23</value>
-  </data>
-  <data name="label_Seconds.Text" xml:space="preserve">
-    <value>secondes.</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Bougeur de pointeur</value>
-  </data>
-  <data name="label_Language.Text" xml:space="preserve">
-    <value>Langue:</value>
-  </data>
-  <data name="Moving of {0} pixels, every {1} seconds." xml:space="preserve">
-    <value>Deplacement de {0} pixels, toutes les {1} secondes.</value>
+  <data name="Pointer has already been moved." xml:space="preserve">
+    <value>O ponteiro já foi movido.</value>
   </data>
 </root>

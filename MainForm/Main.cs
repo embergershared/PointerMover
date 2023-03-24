@@ -43,11 +43,12 @@ namespace MainForm
 
         // UI Languages
         private readonly Dictionary<string, Lang[]> _languages;
-        // Localization
-        private readonly IStringLocalizer<Main> _localizer = null!;
-        // Dependencies
+
+        // Dependencies Injection
+        private readonly IStringLocalizer<Main> _localizer;
         private readonly IConfigurationRoot _configurationRoot;
         private readonly IPointerMover _pointerMover;
+
         // Variables
         private int _elapsedSeconds;
         private int _moveInterval;
@@ -75,24 +76,6 @@ namespace MainForm
             _debugIsEnabled = Convert.ToBoolean(_configurationRoot["EnableDebug"]);
         }
 
-        private void ShowDebugComponents()
-        {
-            label_Debug.Show();
-            label_X.Show();
-            label_Y.Show();
-            label_Action.Show();
-            label_Command.Show();
-        }
-
-        private void HideDebugComponents()
-        {
-            label_Debug.Hide();
-            label_X.Hide();
-            label_Y.Hide();
-            label_Action.Hide();
-            label_Command.Hide();
-        }
-
         #endregion
 
         #region GUI events
@@ -111,22 +94,34 @@ namespace MainForm
 
             if (_debugIsEnabled)
             {
-                label_Command.Text = $@"Moving of {_movePixels} pixels, every {_moveInterval} seconds.";
+                label_Command.Text = string.Format(_localizer["Moving of {0} pixels, every {1} seconds."], _movePixels, _moveInterval);
                 ShowDebugComponents();
             }
 
             timer_RunningTime.Start();
         }
 
-        private void SetPointerMoverPixelsMove()
+        private void Button_Stop_Click(object sender, EventArgs e)
         {
-            _ = int.TryParse(_configurationRoot["DefaultPixelsMove"], out _movePixels);
-            _pointerMover.Initialize(_movePixels);
+            button_Start.Enabled = true;
+            button_Stop.Enabled = false;
+            numericUpDown_Interval.Enabled = true;
+
+            HideDebugComponents();
+            label_Command.Text = "";
+
+            timer_RunningTime.Stop();
         }
 
         private void Button_Quit_Click(object sender, EventArgs e)
         {
             Dispose();
+        }
+
+        private void SetPointerMoverPixelsMove()
+        {
+            _ = int.TryParse(_configurationRoot["DefaultPixelsMove"], out _movePixels);
+            _pointerMover.Initialize(_movePixels);
         }
 
         private void ComboBox_Language_SelectionChangeCommitted(object sender, EventArgs e)
@@ -141,11 +136,34 @@ namespace MainForm
             }
         }
 
+        private void Label_Action_TextChanged(object sender, EventArgs e)
+        {
+            timer_DisplayDebugAction.Start();
+        }
+
+        private void Timer_DisplayDebugAction_Tick(object sender, EventArgs e)
+        {
+            label_Action.Text = "";
+            timer_DisplayDebugAction.Stop();
+        }
+
+        private void Timer_RunningTime_Tick(object sender, EventArgs e)
+        {
+            // Timer ticks each second and we do 3 things:
+            // 1. Add 1 second to the elapsedSeconds
+            _elapsedSeconds += 1;
+
+            // 2. Update running time text box
+            DisplayElapsedTime(_elapsedSeconds);
+
+            // 3. Check if we move the pointer
+            if (_elapsedSeconds % _moveInterval != 0) return;
+            // Move the pointer
+            _pointerMover.MovePointer();
+        }
+
         #endregion
 
-        //
-        // Private methods
-        //
         #region Private methods
 
         private void Main_Load(object sender, EventArgs e)
@@ -159,6 +177,9 @@ namespace MainForm
             ClearCodingTexts();
 
             _pointerMover.ShareDebugInfos(label_Action, label_X, label_Y);
+
+            numericUpDown_Interval.Value = (decimal.Parse(_configurationRoot["DefaultInterval"]));
+
             if (!_debugIsEnabled) return;
             ShowDebugComponents();
         }
@@ -188,23 +209,6 @@ namespace MainForm
             comboBox_Language.SelectedIndex = index;
         }
 
-        #endregion
-
-        private void Timer_RunningTime_Ticks(object sender, EventArgs e)
-        {
-            // Timer ticks each second and we do 3 things:
-            // 1. Add 1 second to the elapsedSeconds
-            _elapsedSeconds += 1;
-
-            // 2. Update running time text box
-            DisplayElapsedTime(_elapsedSeconds);
-
-            // 3. Check if we move the pointer
-            if (_elapsedSeconds % _moveInterval != 0) return;
-            // Move the pointer
-            _pointerMover.MovePointer();
-        }
-
         private void DisplayElapsedTime(int i)
         {
             var timespan = TimeSpan.FromSeconds(i);
@@ -212,27 +216,24 @@ namespace MainForm
             textBox_TimeElapsed.Text = display;
         }
 
-        private void Button_Stop_Click(object sender, EventArgs e)
+        private void ShowDebugComponents()
         {
-            button_Start.Enabled = true;
-            button_Stop.Enabled = false;
-            numericUpDown_Interval.Enabled = true;
-
-            HideDebugComponents();
-            label_Command.Text = "";
-
-            timer_RunningTime.Stop();
+            label_Debug.Show();
+            label_X.Show();
+            label_Y.Show();
+            label_Action.Show();
+            label_Command.Show();
         }
 
-        private void Label_Action_TextChanged(object sender, EventArgs e)
+        private void HideDebugComponents()
         {
-            timer_DisplayDebugAction.Start();
+            label_Debug.Hide();
+            label_X.Hide();
+            label_Y.Hide();
+            label_Action.Hide();
+            label_Command.Hide();
         }
 
-        private void timer_DisplayDebugAction_Tick(object sender, EventArgs e)
-        {
-            label_Action.Text = "";
-            timer_DisplayDebugAction.Stop();
-        }
+        #endregion
     }
 }
