@@ -54,9 +54,9 @@ namespace MainForm.Classes
                 // If the pointer didn't move since last interval, we move it
                 if (_pointerLastPos.IsSamePosition(currentPointerPosition))
                 {
-                    var direction = _moveAway ? _localizer["away"] : _localizer["back"];
+                    var moveMessage = _moveAway ? _localizer["Moving pointer away."] : _localizer["Moving pointer back."];
                     // ReSharper disable once LocalizableElement
-                    if (_labelAction != null) _labelAction.Text = $"{_localizer["Moving pointer"]} {direction}.";
+                    if (_labelAction != null) _labelAction.Text = moveMessage.Value;
 
                     var moveValue = _moveAway ? (1 * _pixelMoveValue) : (-1 * _pixelMoveValue);
                     PerformMove(moveValue);
@@ -64,7 +64,7 @@ namespace MainForm.Classes
                 }
                 else
                 {
-                    if (_labelAction != null) _labelAction.Text = @"Pointer has already been moved.";
+                    if (_labelAction != null) _labelAction.Text = _localizer["Pointer has already been moved."].Value;
                     _moveAway = true;
                 }
             }
