@@ -86,6 +86,7 @@ namespace MainForm
             DisplayElapsedTime(_elapsedSeconds);
 
             SetPointerMoverPixelsMove();
+            ClearCodingTexts();
 
             button_Stop.Enabled = true;
             button_Start.Enabled = false;
@@ -134,6 +135,7 @@ namespace MainForm
             {
                 SetFormUiLanguage("en-US");
             }
+            ClearCodingTexts();
         }
 
         private void Label_Action_TextChanged(object sender, EventArgs e)
