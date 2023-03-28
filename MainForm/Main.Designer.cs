@@ -44,7 +44,6 @@ namespace MainForm
             numericUpDown_Interval = new NumericUpDown();
             label_MoveInterval = new Label();
             label_Seconds = new Label();
-            label_Debug = new Label();
             label_X = new Label();
             label_Y = new Label();
             label_Command = new Label();
@@ -81,8 +80,8 @@ namespace MainForm
             // 
             // comboBox_Language
             // 
-            comboBox_Language.FormattingEnabled = true;
             resources.ApplyResources(comboBox_Language, "comboBox_Language");
+            comboBox_Language.FormattingEnabled = true;
             comboBox_Language.Name = "comboBox_Language";
             comboBox_Language.SelectionChangeCommitted += ComboBox_Language_SelectionChangeCommitted;
             // 
@@ -94,6 +93,7 @@ namespace MainForm
             // textBox_TimeElapsed
             // 
             resources.ApplyResources(textBox_TimeElapsed, "textBox_TimeElapsed");
+            textBox_TimeElapsed.BorderStyle = BorderStyle.None;
             textBox_TimeElapsed.Name = "textBox_TimeElapsed";
             textBox_TimeElapsed.ReadOnly = true;
             textBox_TimeElapsed.TabStop = false;
@@ -105,8 +105,8 @@ namespace MainForm
             // 
             // numericUpDown_Interval
             // 
-            numericUpDown_Interval.Increment = new decimal(new int[] { 5, 0, 0, 0 });
             resources.ApplyResources(numericUpDown_Interval, "numericUpDown_Interval");
+            numericUpDown_Interval.Increment = new decimal(new int[] { 5, 0, 0, 0 });
             numericUpDown_Interval.Maximum = new decimal(new int[] { 1800, 0, 0, 0 });
             numericUpDown_Interval.Minimum = new decimal(new int[] { 5, 0, 0, 0 });
             numericUpDown_Interval.Name = "numericUpDown_Interval";
@@ -121,11 +121,6 @@ namespace MainForm
             // 
             resources.ApplyResources(label_Seconds, "label_Seconds");
             label_Seconds.Name = "label_Seconds";
-            // 
-            // label_Debug
-            // 
-            resources.ApplyResources(label_Debug, "label_Debug");
-            label_Debug.Name = "label_Debug";
             // 
             // label_X
             // 
@@ -161,7 +156,6 @@ namespace MainForm
             Controls.Add(label_Command);
             Controls.Add(label_Y);
             Controls.Add(label_X);
-            Controls.Add(label_Debug);
             Controls.Add(label_Seconds);
             Controls.Add(label_MoveInterval);
             Controls.Add(numericUpDown_Interval);
@@ -172,7 +166,6 @@ namespace MainForm
             Controls.Add(button_Start);
             Controls.Add(button_Stop);
             Controls.Add(button_Quit);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             Name = "Main";
             Load += Main_Load;
@@ -194,7 +187,6 @@ namespace MainForm
         private NumericUpDown numericUpDown_Interval;
         private Label label_MoveInterval;
         private Label label_Seconds;
-        private Label label_Debug;
         private Label label_X;
         private Label label_Y;
         private Label label_Command;

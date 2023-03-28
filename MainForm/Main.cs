@@ -91,11 +91,12 @@ namespace MainForm
             button_Stop.Enabled = true;
             button_Start.Enabled = false;
             numericUpDown_Interval.Enabled = false;
+            comboBox_Language.Enabled = false;
             _moveInterval = (int)numericUpDown_Interval.Value;
 
             if (_debugIsEnabled)
             {
-                label_Command.Text = string.Format(_localizer["Moving of {0} pixels, every {1} seconds."], _movePixels, _moveInterval);
+                label_Command.Text = string.Format(_localizer["{0} pixels move."], _movePixels);
                 ShowDebugComponents();
             }
 
@@ -107,6 +108,7 @@ namespace MainForm
             button_Start.Enabled = true;
             button_Stop.Enabled = false;
             numericUpDown_Interval.Enabled = true;
+            comboBox_Language.Enabled = true;
 
             HideDebugComponents();
             label_Command.Text = "";
@@ -180,7 +182,9 @@ namespace MainForm
 
             _pointerMover.ShareDebugInfos(label_Action, label_X, label_Y);
 
-            numericUpDown_Interval.Value = (decimal.Parse(_configurationRoot["DefaultInterval"]));
+            numericUpDown_Interval.Value = decimal.Parse(_configurationRoot["DefaultInterval"] ?? "15");
+
+            HideDebugComponents();
 
             if (!_debugIsEnabled) return;
             ShowDebugComponents();
@@ -220,7 +224,6 @@ namespace MainForm
 
         private void ShowDebugComponents()
         {
-            label_Debug.Show();
             label_X.Show();
             label_Y.Show();
             label_Action.Show();
@@ -229,10 +232,9 @@ namespace MainForm
 
         private void HideDebugComponents()
         {
-            label_Debug.Hide();
             label_X.Hide();
             label_Y.Hide();
-            label_Action.Hide();
+            //label_Action.Hide();
             label_Command.Hide();
         }
 
