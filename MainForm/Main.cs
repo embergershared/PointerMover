@@ -53,7 +53,7 @@ namespace MainForm
         private int _elapsedSeconds;
         private int _moveInterval;
         private int _movePixels;
-        private readonly bool _debugIsEnabled;
+        private bool _debugIsEnabled;
 
         #endregion
 
@@ -72,8 +72,6 @@ namespace MainForm
             _localizer = localizer;
 
             InitializeComponent();
-
-            _debugIsEnabled = Convert.ToBoolean(_configurationRoot["EnableDebug"]);
         }
 
         #endregion
@@ -239,5 +237,34 @@ namespace MainForm
         }
 
         #endregion
+
+        private void TextBox_TimeElapsed_DoubleClick(object sender, EventArgs e)
+        {
+            if (_debugIsEnabled)
+            {
+                DisableDebug();
+            }
+            else
+            {
+                EnableDebug();
+            }
+        }
+
+        private void EnableDebug()
+        {
+            _debugIsEnabled = true;
+            ShowDebugComponents();
+        }
+
+        private void DisableDebug()
+        {
+            _debugIsEnabled = false;
+            HideDebugComponents();
+        }
+
+        private void label_MoveInterval_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

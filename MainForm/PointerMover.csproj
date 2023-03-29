@@ -6,7 +6,25 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>disable</ImplicitUsings>
+    <StartupObject>MainForm.Program</StartupObject>
+    <ApplicationIcon>pointercursor.ico</ApplicationIcon>
+    <Title>Pointer Mover</Title>
+    <Authors>Emmanuel Bergerat</Authors>
+    <Company>Emwito</Company>
+    <Product>Pointer Mover</Product>
+    <Description>An application that moves the pointer every X seconds.</Description>
+    <Copyright>(c) Emmanuel Bergerat</Copyright>
+    <PackageProjectUrl>https://github.com/embergershared/PointerMover</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/embergershared/PointerMover</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <NeutralLanguage>en-US</NeutralLanguage>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="pointercursor.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Interfaces\" />
