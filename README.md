@@ -8,6 +8,14 @@ Little WinForms application that moves the mouse pointer back and forth every X 
 
 ### Pre-requisites
 
+#### Platform
+
+The program has been developed as a WinForms in .NET core 7.0
+
+It has been tested/deployed on `Windows 10`, `Windows 11` and `Windows Server 2019`.
+
+#### .NET 7.0 Desktop Runtime
+
 For the program to run, the `.NET Desktop Runtime` is required.
 
 - If **NOT installed**, the following message will appear:
