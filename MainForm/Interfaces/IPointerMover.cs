@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace MainForm.Interfaces;
+namespace PointerMover.Interfaces;
 
 public interface IPointerMover
 {

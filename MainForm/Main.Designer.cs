@@ -1,7 +1,6 @@
 ﻿using System.Windows.Forms;
-using System.Drawing;
 
-namespace MainForm
+namespace PointerMover
 {
     partial class Main
     {
@@ -97,7 +96,6 @@ namespace MainForm
             textBox_TimeElapsed.Name = "textBox_TimeElapsed";
             textBox_TimeElapsed.ReadOnly = true;
             textBox_TimeElapsed.TabStop = false;
-            textBox_TimeElapsed.DoubleClick += TextBox_TimeElapsed_DoubleClick;
             // 
             // label_Elapsed
             // 
@@ -117,7 +115,7 @@ namespace MainForm
             // 
             resources.ApplyResources(label_MoveInterval, "label_MoveInterval");
             label_MoveInterval.Name = "label_MoveInterval";
-            label_MoveInterval.Click += label_MoveInterval_Click;
+            label_MoveInterval.Click += Label_MoveInterval_Click;
             // 
             // label_Seconds
             // 

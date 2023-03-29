@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace MainForm.Structs;
+namespace PointerMover.Structs;
 
 [StructLayout(LayoutKind.Sequential)]
 public struct WinPoint

@@ -1,7 +1,6 @@
-﻿using System;
-using MainForm.Structs;
+﻿using PointerMover.Structs;
 
-namespace MainForm.Classes;
+namespace PointerMover.Classes;
 
 public class PointerPosition
 {

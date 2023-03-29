@@ -20,22 +20,20 @@
  * THE SOFTWARE.
  */
 
+// ReSharper disable once RedundantUsingDirective
+// ReSharper disable once RedundantUsingDirective
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
-using MainForm.Interfaces;
 using Microsoft.Extensions.Configuration;
-using MainForm.Models;
-// ReSharper disable once RedundantUsingDirective
-using MainForm.Classes;
-// ReSharper disable once RedundantUsingDirective
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Header;
 using Microsoft.Extensions.Localization;
+using PointerMover.Interfaces;
+using PointerMover.Models;
 
-namespace MainForm
+namespace PointerMover
 {
     public partial class Main : Form
     {
@@ -136,6 +134,7 @@ namespace MainForm
                 SetFormUiLanguage("en-US");
             }
             ClearCodingTexts();
+            SetIntervalValue();
         }
 
         private void Label_Action_TextChanged(object sender, EventArgs e)
@@ -164,6 +163,18 @@ namespace MainForm
             _pointerMover.MovePointer();
         }
 
+        private void Label_MoveInterval_Click(object sender, EventArgs e)
+        {
+            if (_debugIsEnabled)
+            {
+                DisableDebug();
+            }
+            else
+            {
+                EnableDebug();
+            }
+        }
+
         #endregion
 
         #region Private methods
@@ -180,12 +191,14 @@ namespace MainForm
 
             _pointerMover.ShareDebugInfos(label_Action, label_X, label_Y);
 
-            numericUpDown_Interval.Value = decimal.Parse(_configurationRoot["DefaultInterval"] ?? "15");
+            SetIntervalValue();
 
             HideDebugComponents();
+        }
 
-            if (!_debugIsEnabled) return;
-            ShowDebugComponents();
+        private void SetIntervalValue()
+        {
+            numericUpDown_Interval.Value = decimal.Parse(_configurationRoot["DefaultInterval"] ?? "10");
         }
 
         private void ClearCodingTexts()
@@ -224,7 +237,7 @@ namespace MainForm
         {
             label_X.Show();
             label_Y.Show();
-            label_Action.Show();
+            //label_Action.Show();
             label_Command.Show();
         }
 
@@ -234,20 +247,6 @@ namespace MainForm
             label_Y.Hide();
             //label_Action.Hide();
             label_Command.Hide();
-        }
-
-        #endregion
-
-        private void TextBox_TimeElapsed_DoubleClick(object sender, EventArgs e)
-        {
-            if (_debugIsEnabled)
-            {
-                DisableDebug();
-            }
-            else
-            {
-                EnableDebug();
-            }
         }
 
         private void EnableDebug()
@@ -262,9 +261,6 @@ namespace MainForm
             HideDebugComponents();
         }
 
-        private void label_MoveInterval_Click(object sender, EventArgs e)
-        {
-
-        }
+        #endregion
     }
 }

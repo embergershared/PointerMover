@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace MainForm.Structs;
+namespace PointerMover.Structs;
 
 //
 // Windows RECT equivalent structure 

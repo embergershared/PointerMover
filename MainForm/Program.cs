@@ -22,13 +22,14 @@
 
 using System;
 using System.Windows.Forms;
-using MainForm.Classes;
-using MainForm.Interfaces;
+using PointerMover;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using PointerMover.Classes;
+using PointerMover.Interfaces;
 
-namespace MainForm
+namespace PointerMover
 {
     internal static class Program
     {
@@ -81,7 +82,7 @@ namespace MainForm
             return Host.CreateDefaultBuilder()
                 .ConfigureServices((services) => {
                     services.AddSingleton<ILanguagesCollections, LanguagesCollections>();
-                    services.AddTransient<IPointerMover, PointerMover>();
+                    services.AddTransient<IPointerMover, Classes.PointerMover>();
                     if (Config != null) _ = services.AddSingleton(Config);
                     services.AddTransient<Main>();
                     services.AddLocalization();

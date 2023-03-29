@@ -96,25 +96,22 @@
     <value>241, 23</value>
   </data>
   <data name="textBox_TimeElapsed.Size" type="System.Drawing.Size, System.Drawing">
-    <value>332, 80</value>
+    <value>341, 80</value>
   </data>
   <data name="label_Elapsed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>127, 58</value>
+    <value>113, 58</value>
   </data>
   <data name="label_Elapsed.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 23</value>
+    <value>122, 23</value>
   </data>
   <data name="label_Elapsed.Text" xml:space="preserve">
-    <value>Temps écoulé:</value>
+    <value>Temps écoulé :</value>
   </data>
   <data name="numericUpDown_Interval.Location" type="System.Drawing.Point, System.Drawing">
-    <value>284, 126</value>
-  </data>
-  <data name="numericUpDown_Interval.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 30</value>
+    <value>252, 126</value>
   </data>
   <data name="label_MoveInterval.Location" type="System.Drawing.Point, System.Drawing">
-    <value>46, 128</value>
+    <value>14, 128</value>
   </data>
   <data name="label_MoveInterval.Size" type="System.Drawing.Size, System.Drawing">
     <value>231, 23</value>
@@ -123,7 +120,7 @@
     <value>Bouger le pointeur toutes les</value>
   </data>
   <data name="label_Seconds.Location" type="System.Drawing.Point, System.Drawing">
-    <value>388, 128</value>
+    <value>347, 128</value>
   </data>
   <data name="label_Seconds.Size" type="System.Drawing.Size, System.Drawing">
     <value>84, 23</value>
@@ -138,7 +135,7 @@
     <value>579, 58</value>
   </data>
   <data name="label_Action.Location" type="System.Drawing.Point, System.Drawing">
-    <value>469, 128</value>
+    <value>437, 128</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>696, 254</value>

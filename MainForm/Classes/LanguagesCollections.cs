@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using MainForm.Interfaces;
-using MainForm.Models;
+using PointerMover.Interfaces;
+using PointerMover.Models;
 
-namespace MainForm.Classes;
+namespace PointerMover.Classes;
 
 public class LanguagesCollections : ILanguagesCollections
 {

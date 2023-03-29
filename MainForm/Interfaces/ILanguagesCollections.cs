@@ -1,7 +1,7 @@
-﻿using MainForm.Models;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using PointerMover.Models;
 
-namespace MainForm.Interfaces;
+namespace PointerMover.Interfaces;
 
 public interface ILanguagesCollections
 {

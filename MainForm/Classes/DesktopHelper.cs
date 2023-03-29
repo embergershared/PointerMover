@@ -1,11 +1,7 @@
-﻿using MainForm.Structs;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
+using PointerMover.Structs;
 
-namespace MainForm.Classes
+namespace PointerMover.Classes
 {
     public static class DesktopHelper
     {
